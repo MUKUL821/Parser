@@ -21,10 +21,7 @@ public class App
     		path_img= args[0];
     	}
     	else
-    	{
-    		 path="D:\\CMPE202\\CASES\\uml-parser-test-4\\uml-parser-test-4\\";
-             path_img ="parser.png";
-    	}
+    System.out.println("Insufficient data");
         
     	    	  File[] filestrail = new File(path).listFiles();
         //	    showFiles(filestrail);
@@ -49,7 +46,7 @@ public class App
     	        	if(file.getName().indexOf(".java")>0)
     	        	{
     	        	
-    	            System.out.println("File: " + file.getName()+"count"+count);
+
     	        files.add(file.getName());
     	      	  }
     	        }
@@ -57,7 +54,7 @@ public class App
          
       for(int i=0;i<files.size();i++)
             {
-    	  System.out.println("nbnbnbb"+files.get(i));
+    
     	    CompilationUnit cu = obj.getFileCompilationUnit(files.get(i),path);
     	  eachclass = objc.ClassDetails(cu);
     	  if(i!=0)
@@ -67,7 +64,7 @@ public class App
     	   }
       
     	//System.out.println("My partial List"+parsedString);
-    	System.out.println("My partial arraylist List"+allclass);
+    //	System.out.println("My partial arraylist List"+allclass);
         new CodeParser(allclass,path,path_img);
        
         
@@ -77,10 +74,10 @@ public class App
 		// TODO Auto-generated method stub
 		   for (File file : files) {
 		        if (file.isDirectory()) {
-		            System.out.println("Directory: " + file.getName());
+		          //  System.out.println("Directory: " + file.getName());
 		            showFiles(file.listFiles()); // Calls same method again.
 		        } else {
-		            System.out.println("File: " + file.getName());
+		          //  System.out.println("File: " + file.getName());
 		        }
 		    }
 		
